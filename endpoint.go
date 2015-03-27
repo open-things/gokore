@@ -9,6 +9,23 @@ type EndpointInterface interface {
 	// Returns Singular form of the Title (used in some json output)
 	// Examples: "article", "user", "category"
 	SingularTitle() string
+
+	// Returns a list of objects.
+	// Example "[{..}, {..}]"
+	List(args *ListArguments) ([]interface{}, GokoreError)
+
+	// Returns HTTP 201 status code and
+	// created resource.
+	Create(object interface{}) (interface{}, GokoreError)
+
+	// Returns a resource.
+	Read(id string) (interface{}, GokoreError)
+
+	// Updates a resource and returns it.
+	Update(id string, object interface{}) (interface{}, GokoreError)
+
+	// Deletes a resource.
+	Delete(id string) GokoreError
 }
 
 // Endpoints List
