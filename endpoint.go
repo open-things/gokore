@@ -16,16 +16,16 @@ type EndpointInterface interface {
 
 	// Returns HTTP 201 status code and
 	// created resource.
-	Create(object interface{}) (interface{}, GokoreError)
+	Create(args *CreateArguments) (interface{}, GokoreError)
 
 	// Returns a resource.
-	Read(id string) (interface{}, GokoreError)
+	Read(args *ReadArguments) (interface{}, GokoreError)
 
 	// Updates a resource and returns it.
-	Update(id string, object interface{}) (interface{}, GokoreError)
+	Update(args *UpdateArguments) (interface{}, GokoreError)
 
 	// Deletes a resource.
-	Delete(id string) GokoreError
+	Delete(args *DeleteArguments) GokoreError
 }
 
 // Endpoints List
