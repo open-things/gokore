@@ -23,19 +23,19 @@ func (this *TestEndpoint) List(args *ListArguments) ([]interface{}, GokoreError)
 	return nil, nil
 }
 
-func (this *TestEndpoint) Create(object interface{}) (interface{}, GokoreError) {
+func (this *TestEndpoint) Create(args *CreateArguments) (interface{}, GokoreError) {
 	return nil, nil
 }
 
-func (this *TestEndpoint) Read(id string) (interface{}, GokoreError) {
+func (this *TestEndpoint) Read(args *ReadArguments) (interface{}, GokoreError) {
 	return nil, nil
 }
 
-func (this *TestEndpoint) Update(id string, object interface{}) (interface{}, GokoreError) {
+func (this *TestEndpoint) Update(args *UpdateArguments) (interface{}, GokoreError) {
 	return nil, nil
 }
 
-func (this *TestEndpoint) Delete(id string) GokoreError {
+func (this *TestEndpoint) Delete(args *DeleteArguments) GokoreError {
 	return nil
 }
 
